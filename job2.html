@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Details</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<!-- ===== MAIN CONTAINER ===== -->
+  <!-- header -->
+        <header class="h-16 w-full bg-white border-1 border border-gray-300 p-2 font-serif fixed top-0 shadow-[0_2px_6px_0_rgba(132,132,132,0.15)] pl-5 sm:pl-20 flex items-center z-50">
+            <h3 class="font-bold text-xl sm:text-2xl">
+                Gowthamraj <span class="text-[#03001C]">Network</span>
+            </h3>
+        </header>
+
+<div class="max-w-6xl mx-auto mt-20 p-6 bg-white rounded-lg shadow-md">
+
+    <!-- JOB TITLE -->
+    <h1 id="job-title" class="text-3xl font-bold text-indigo-950">
+        Management intern    
+    </h1>
+    <div class="mt-3 text-gray-600">
+        <p><strong>Posted on:14/07/2025</strong> <span id="posted-date"></span></p>
+        <p><strong>Vacancy:03</strong> <span id="vacancy-count"></span></p>
+    </div>
+    <hr class="my-5">
+
+    <!-- SKILLS -->
+    <section class="mb-6">
+        <h2 class="text-xl font-semibold text-[#03001C]">Skills Required</h2>
+        <ul id="skills-list" class="list-disc list-inside mt-2 text-gray-700">
+            <li>JavaScript, HTML, CSS</li>
+            <li>React.js and Tailwind CSS</li>
+            <li>Git and Version Control</li>
+        </ul>
+    </section>
+
+    <!-- RESPONSIBILITIES -->
+    <section class="mb-6">
+        <h2 class="text-xl font-semibold text-[#03001C]">Key Responsibilities</h2>
+        <ul id="responsibilities-list" class="list-disc list-inside mt-2 text-gray-700">
+            <li>Develop and maintain web applications</li>
+            <li>Collaborate with design and backend teams</li>
+            <li>Ensure responsive and cross-browser compatibility</li>
+        </ul>
+    </section>
+
+    <!-- QUALIFICATIONS -->
+    <section class="mb-6">
+        <h2 class="text-xl font-semibold text-[#03001C]">Qualifications</h2>
+        <ul id="qualifications-list" class="list-disc list-inside mt-2 text-gray-700">
+            <li>Bachelor’s degree in Computer Science or related field</li>
+            <li>2+ years of professional web development experience</li>
+            <li>Strong problem-solving and communication skills</li>
+        </ul>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section class="mb-6">
+        <h2 class="text-xl font-semibold text-[#03001C] mb-4">Apply for this position</h2>
+        <form class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+                <div>
+                    <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" required
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                </div>
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email" required
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+            </div>
+
+            <div>
+                <label for="resume" class="block text-sm font-medium text-gray-700">Upload Resume</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required
+                    class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4
+                           file:rounded-md file:border-0 file:text-sm file:font-semibold
+                           file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+            </div>
+
+            <div>
+                <button type="submit"
+                    class="w-full px-4 py-2 bg-[#03001C] text-white rounded-md hover:bg-indigo-700">
+                    Submit Application
+                </button>
+            </div>
+        </form>
+
+        
+    </section>
+    
+
+</div>
+<!-- footer -->
+        <footer class="w-[90%] min-h-[400px] mx-auto flex flex-col items-center pt-10 bg-[#03001C] mt-20">
+            <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4">
+                <div class="mr-0 md:mr-10">
+                    <p class="text-white text-xl font-semibold">
+                        Gowthamraj Network
+                    </p>
+                    <p class="text-white/60 text-sm w-full md:w-[200px] mt-2">
+                        Helping anbitious learners upskill themselves & shift to top product based companies. 
+                    </p>
+                </div>
+
+                <div>
+                    <p class="text-white text-xl font-semibold">
+                        Free Resources
+                    </p>
+                    <ul class="text-white/60 text-sm w-full md:w-[200px] mt-2">
+                        <li class="my-3">Attend Free</li>
+                        <li class="my-3"> Events</li>
+                        <li class="my-3"> Blog</li>
+                        <li class="my-3">Docs</li>
+                        <li class="my-3">Practice Test</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="text-white text-xl font-semibold">
+                        Who are we
+                    </p>
+                    <ul class="text-white/60 text-sm w-full md:w-[200px] mt-2">
+                        <li class="my-3">Home</li>
+                        <li class="my-3">About us</li>
+                        <li class="my-3">Reviews</li>
+                        <li class="my-3">Reviews</li>
+                        <li class="my-3">Privacy Policy</li>
+                        <li class="my-3">Terms & Condition</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="text-white text-xl font-semibold">
+                        Contact Us
+                    </p>
+                    <ul class="text-white/60 text-sm w-full md:w-[200px] mt-2">
+                        <li class="my-3">E-mail</li>
+                        <li class="my-3">ask@grnetwork.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between w-full px-4 mt-10 gap-4">
+                <p class="text-white/60 text-center md:text-left">Copyright 2025 GowathamrajNetwork Pvt.Ltd.All rights reserved</p>
+                <ul class="flex gap-3">
+                    <li><i class="fa-brands fa-linkedin-in text-white/60"></i></li>
+                    <li><i class="fa-brands fa-youtube text-white/60"></i></li>
+                    <li><i class="fa-brands fa-square-instagram text-white/60"></i></li>
+                </ul>
+            </div>
+        </footer>
+<!-- ===== SCRIPT ===== -->
+<script>
+// Read query parameters from the URL
+const params = new URLSearchParams(window.location.search);
+// document.getElementById('job-title').textContent = params.get('title') || 'Job Title';
+// document.getElementById('posted-date').textContent = params.get('posted') || 'N/A';
+// document.getElementById('vacancy-count').textContent = params.get('vacancy') || 'N/A';
+</script>
+
+</body>
+</html>
