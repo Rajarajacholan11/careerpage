@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Page</title>
+
+  <!-- Preconnects (small perf win) -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+
+  <!-- Preload LCP hero image (update the URL if your path differs) -->
+  <link rel="preload" as="image" href="IMAGES/aerial-view-business-people-brainstorming-together (1).jpg" imagesizes="(min-width: 768px) 1200px, 100vw">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <style>
+    /* Helps skip rendering of offscreen sections until needed */
+    .cv-auto { content-visibility: auto; contain-intrinsic-size: 1000px; }
+  </style>
+</head>
+<body>
+  <div class="careerpage-container">
+
+    <!-- header -->
+    <header class="h-16 w-full bg-white border border-gray-300 p-2 font-serif fixed top-0 shadow-[0_2px_6px_0_rgba(132,132,132,0.15)] pl-5 sm:pl-20 flex items-center z-50">
+      <h3 class="font-bold text-xl sm:text-2xl">
+        Gowthamraj <span class="text-blue-500">Network</span>
+      </h3>
+    </header>
+
+    <!-- main image -->
+    <div class="mt-20 relative z-[-1] w-[90%] h-[600px] mx-auto">
+      <!-- banner-image -->
+      <img
+        class="w-full h-full object-center object-cover rounded-md"
+        src="IMAGES/aerial-view-business-people-brainstorming-together (1).jpg"
+        alt="Team brainstorming together"
+        width="1200" height="600"
+        loading="eager" decoding="async" fetchpriority="high"
+      >
+      <div class="absolute z-[8] top-1/4 max-w-[90%] sm:max-w-none">
+        <h1 class="text-3xl sm:text-6xl font-bold text-white px-5 sm:px-10" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.7)">
+          We're Hiring!<br>
+          <span>Bring Passion And Your Skills.</span>
+        </h1>
+        <div class="flex">
+          <p class="text-white text-base sm:text-lg w-[90%] sm:w-[350px] px-5 sm:px-10 p-2">
+            if you like meetings that could've been emails & stiff dress codes
+            <span>--this is NOT for You</span>
+            .But if you crave a thriving,meme-filled,caffine-powered workplace where your ideas matter
+            <span></span>--congratulations,You've found your tribe.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- team -->
+    <div class="cv-auto min-h-[500px] w-[90%] mx-auto mt-10 bg-indigo-50 flex flex-col items-center justify-around gap-4 text-center p-6">
+      <h3 class="text-xl sm:text-2xl font-bold text-indigo-950">
+        The Right Team Makes All The Difference
+      </h3>
+      <p class="text-lg text-indigo-950">
+        let's build,innovate,and,grow together
+      </p>
+      <img
+        src="IMAGES/successfulbusinessman.webp"
+        height="250" width="250" alt="Team lead"
+        class="rounded-md h-[200px] sm:h-[250px] w-auto"
+        loading="lazy" decoding="async"
+      >
+      <span class="w-[140px] h-[44px] text-center py-2 rounded-md bg-indigo-950 text-white inline-flex items-center justify-center">
+        Apply Now
+      </span>
+    </div>
+
+    <!-- carousel -->
+    <div class="cv-auto w-[90%] mx-auto pt-16">
+      <p class="text-2xl text-black font-bold font-sans text-center">
+        Meet the Architect of Awesome
+      </p>
+      <div class="w-full sm:w-[750px] mt-10 overflow-hidden relative mx-auto">
+        <!-- Images wrapper -->
+        <div id="carousel" class="flex gap-2 transition-transform duration-500 ease-in-out will-change-transform">
+          <!-- NOTE: fixed wrong folder case "IMAGEs" -> "IMAGES" -->
+          <img src="IMAGES/one.jpeg" class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-[250px] object-cover rounded" alt="Businessman by car" loading="lazy" decoding="async" width="320" height="250"/>
+          <img src="IMAGES/two.jpeg" class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-[250px] object-cover rounded" alt="Top manager portrait" loading="lazy" decoding="async" width="320" height="250"/>
+          <img src="IMAGES/three.jpeg" class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-[250px] object-cover rounded" alt="Businesswoman outdoors" loading="lazy" decoding="async" width="320" height="250"/>
+          <img src="IMAGES/four.jpeg" class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-[250px] object-cover rounded" alt="Entrepreneur" loading="lazy" decoding="async" width="320" height="250"/>
+          <img src="IMAGES/five.jpeg" class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 h-[250px] object-cover rounded" alt="Junior associate" loading="lazy" decoding="async" width="320" height="250"/>
+        </div>
+        <!-- Left arrow -->
+        <button id="prev" class="absolute top-1/2 left-2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full" aria-label="Previous slide">
+          &#10094;
+        </button>
+        <!-- Right arrow -->
+        <button id="next" class="absolute top-1/2 right-2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full" aria-label="Next slide">
+          &#10095;
+        </button>
+      </div>
+    </div>
+
+    <!-- culture -->
+    <div class="cv-auto w-[90%] min-h-[650px] mx-auto border-1 border bg-[#03001C] text-center p-6 sm:p-8 mt-10">
+      <p class="text-gray-500">-CULTURE-</p>
+      <p class="text-white text-2xl font-bold">How is life at Gowthamraj Network?</p>
+
+      <div class="flex justify-center gap-4 mt-4 flex-wrap">
+        <!-- 1 -->
+        <div class="w-full sm:w-[260px] h-auto sm:h-[120px] flex flex-col items-center justify-center bg-white/20 backdrop-blur-sm rounded p-3">
+          <p class="text-white">Passion Over Everything</p>
+          <p class="text-base text-gray-300 sm:text-gray-400">We love what do and it shows in our work.</p>
+        </div>
+        <!-- 2 -->
+        <div class="w-full sm:w-[260px] h-auto sm:h-[120px] flex flex-col items-center justify-center bg-white/20 backdrop-blur-sm rounded p-3">
+          <p class="text-white">Innovate or Hibernate</p>
+          <p class="text-base text-gray-300 sm:text-gray-400">We experiment,take risks, and find smarter ways to improve--except our lunch choices</p>
+        </div>
+        <!-- 3 -->
+        <div class="w-full sm:w-[260px] h-auto sm:h-[120px] flex flex-col items-center justify-center bg-white/20 backdrop-blur-sm rounded p-3">
+          <p class="text-white">Collaboration and Teamwork</p>
+          <p class="text-base text-gray-300 sm:text-gray-400">We work as a tean,win as a team and celebrate as a team</p>
+        </div>
+      </div>
+
+      <!-- team image -->
+      <div class="flex justify-center gap-4 sm:gap-8 mt-8 flex-wrap">
+        <img src="IMAGES/pexels-henri-mathieu-8348627.jpg" alt="Office celebration" class="w-full sm:w-[300px] h-[200px] object-cover rounded" width="300" height="200" loading="lazy" decoding="async">
+        <img src="IMAGES/pexels-fauxels-3184422.webp" alt="Team collaboration" class="w-full sm:w-[300px] h-[200px] object-cover rounded" width="300" height="200" loading="lazy" decoding="async">
+      </div>
+
+      <div class="border-t border-b border-gray-300 w-full sm:w-[70%] mx-auto min-h-[100px] mt-[50px] py-4 px-3">
+        <p class="text-white text-2xl">⚠ Disclaimer</p>
+        <p class="text-white text-lg">Working here may cause excessive career growth,uncontrollable fun,and an addiction to solving problems that matter</p>
+      </div>
+    </div>
+
+    <!-- hiring process -->
+    <div class="cv-auto w-[90%] min-h-[400px] flex flex-col items-center justify-around mx-auto py-8">
+      <p class="text-gray-400">-HOW TO GET IN-</p>
+      <p class="text-2xl font-semibold">Our Hiring Process</p>
+      <ul class="flex flex-wrap justify-center gap-4 mt-6">
+        <li class="h-[200px] w-[220px] flex flex-col items-center text-center pt-4">
+          <p class="rounded-full text-center rounded-full w-[40px] h-[40px] pt-2 bg-blue-200 text-blue-700">01</p>
+          <p class="text-base font-semibold mt-2">Application and Screening</p>
+          <p class="text-sm text-gray-600">Resume shortlisting followed by an initial screening call</p>
+        </li>
+        <li class="h-[200px] w-[220px] flex flex-col items-center text-center pt-4">
+          <p class="rounded-full text-center rounded-full w-[40px] h-[40px] pt-2 bg-blue-200 text-blue-700">02</p>
+          <p class="text-base font-semibold mt-2">Technical interview</p>
+          <p class="text-sm text-gray-600">A skll assessment with a tech expert to evaluate  your expertise</p>
+        </li>
+        <li class="h-[200px] w-[220px] flex flex-col items-center text-center pt-4">
+          <p class="rounded-full text-center rounded-full w-[40px] h-[40px] pt-2 bg-blue-200 text-blue-700">03</p>
+          <p class="text-base font-semibold mt-2">HR interview</p>
+          <p class="text-sm text-gray-600">Disscussion to assess cultural fit and alignment with company values</p>
+        </li>
+        <li class="h-[200px] w-[220px] flex flex-col items-center text-center pt-4">
+          <p class="rounded-full text-center rounded-full w-[40px] h-[40px] pt-2 bg-blue-200 text-blue-700">04</p>
+          <p class="text-base font-semibold mt-2">Final Offer</p>
+          <p class="text-sm text-gray-600">Receive your offer and get ready to start your journey with us!</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- position (OPENINGS) -->
+    <div class="cv-auto w-[90%] min-h-[400px] pt-20 mx-auto flex flex-col items-center justify-around" id="Open">
+      <p class="text-gray-500">--OPENINGS--</p>
+      <p class="text-2xl font-semibold">Browse Open Position </p>
+      <ul class="flex flex-wrap gap-3 justify-center mt-4">
+        <li>
+          <div class="w-[230px] h-[250px] bg-gray-100 border-1 border border-gray-300 p-1 px-2 rounded-md flex flex-col">
+            <p class="text-lg font-semibold">Marketing Specialist</p>
+            <p class="bg-blue-200 text-blue-500 text-[10px] w-[120px] border-1 border-blue-600 p-1 mt-4 rounded-lg text-center">Marketing Department</p>
+            <p class="bg-blue-200 text-blue-500 text-[10px] w-[60px] border-1 border-blue-600 p-1 mt-1 rounded-lg text-center">On Site</p>
+            <p class="border-1 border w-[90px] mx-auto text-center text-blue-500 rounded-md mt-auto mb-2">
+              <a href="job1.html">Apply now</a>
+            </p>
+            <p class="text-gray-400 text-sm text-center">Only 3 Vacancies!</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="w-[230px] h-[250px] bg-gray-100 border-1 border border-gray-300 p-1 px-2 rounded-md flex flex-col">
+            <p class="text-lg font-semibold">Management intern</p>
+            <p class="bg-blue-200 text-blue-500 text-[10px] w-[120px] border-1 border-blue-600 p-1 mt-4 rounded-lg text-center">Product Department</p>
+            <p class="bg-blue-200 text-blue-500 text-[10px] w-[60px] border-1 border-blue-600 p-1 mt-1 rounded-lg text-center">On Site</p>
+            <p class="border-1 border w-[90px] mx-auto text-center text-blue-500 rounded-md mt-auto mb-2">
+              <a href="job2.html">Apply now</a>
+            </p>
+            <p class="text-gray-400 text-sm text-center">Only 3 Vacancies!</p>
+          </div>
+        </li>
+
+        <li>
+          <div class="w-[230px] h-[250px] bg-gray-100 border-1 border border-gray-300 p-1 px-2 rounded-md flex flex-col">
+            <p class="text-lg font-semibold">Developement Associate</p>
+            <p class="bg-blue-200 text-blue-500 text-[10px] w-[120px] border-1 border-blue-600 p-1 mt-4 rounded-lg text-center">Sales Department</p>
+            <p class="bg-blue-200 text-blue-500 text-[10px] w-[60px] border-1 border-blue-600 p-1 mt-1 rounded-lg text-center">On Site</p>
+            <p class="border-1 border w-[90px] mx-auto text-center text-blue-500 rounded-md mt-auto mb-2">
+              <a href="job3.html">Apply now</a>
+            </p>
+            <p class="text-gray-400 text-sm text-center">Only 3 Vacancies!</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- notify -->
+    <div class="cv-auto w-[90%] min-h-[200px] bg-indigo-200 mx-auto flex justify-center items-center mt-4 p-4">
+      <p class="text-center text-lg">
+        PS:No employees were bribed with pizza or held hostage in endless Zoom meetings while making the page.Any  resesmblance to your deam company is a total coincidence...or is it?
+      </p>
+    </div>
+
+    <!-- footer -->
+    <footer class="cv-auto w-[90%] min-h-[400px] mx-auto flex flex-col items-center pt-10 bg-[#03001C] mt-20">
+      <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4">
+        <div class="mr-0 md:mr-10">
+          <p class="text-white text-xl font-semibold">Gowthamraj Network</p>
+          <p class="text-white/60 text-sm w-full md:w-[200px] mt-2">
+            Helping anbitious learners upskill themselves & shift to top product based companies.
+          </p>
+        </div>
+
+        <div>
+          <p class="text-white text-xl font-semibold">Free Resources</p>
+          <ul class="text-white/60 text-sm w-full md:w-[200px] mt-2">
+            <li class="my-3">Attend Free</li>
+            <li class="my-3"> Events</li>
+            <li class="my-3"> Blog</li>
+            <li class="my-3">Docs</li>
+            <li class="my-3">Practice Test</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-white text-xl font-semibold">Who are we</p>
+          <ul class="text-white/60 text-sm w-full md:w-[200px] mt-2">
+            <li class="my-3">Home</li>
+            <li class="my-3">About us</li>
+            <li class="my-3">Reviews</li>
+            <li class="my-3">Reviews</li>
+            <li class="my-3">Privacy Policy</li>
+            <li class="my-3">Terms & Condition</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-white text-xl font-semibold">Contact Us</p>
+          <ul class="text-white/60 text-sm w-full md:w-[200px] mt-2">
+            <li class="my-3">E-mail</li>
+            <li class="my-3">ask@grnetwork.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center justify-between w-full px-4 mt-10 gap-4">
+        <p class="text-white/60 text-center md:text-left">Copyright 2025 GowathamrajNetwork Pvt.Ltd.All rights reserved</p>
+        <ul class="flex gap-3">
+          <li><i class="fa-brands fa-linkedin-in text-white/60" aria-label="LinkedIn"></i></li>
+          <li><i class="fa-brands fa-youtube text-white/60" aria-label="YouTube"></i></li>
+          <li><i class="fa-brands fa-square-instagram text-white/60" aria-label="Instagram"></i></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+
+    let index = 0;
+    const totalSlides = carousel.children.length;
+    let slideWidth = carousel.children[0].getBoundingClientRect().width;
+    let visibleSlides = getVisibleSlides();
+
+    function getVisibleSlides() {
+      // Recalculate slide width on demand
+      slideWidth = carousel.children[0].getBoundingClientRect().width;
+      const parentW = carousel.parentElement.getBoundingClientRect().width;
+      const count = Math.max(1, Math.floor(parentW / slideWidth));
+      return Math.min(totalSlides, count);
+    }
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
+
+    function nextSlide() {
+      if (index < totalSlides - visibleSlides) {
+        index++;
+      } else {
+        index = 0;
+      }
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      if (index > 0) {
+        index--;
+      } else {
+        index = Math.max(0, totalSlides - visibleSlides);
+      }
+      updateCarousel();
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+    // Respect prefers-reduced-motion for auto sliding
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let autoSlide = null;
+    function startAuto() {
+      if (!media.matches) {
+        stopAuto();
+        autoSlide = setInterval(nextSlide, 3000);
+      }
+    }
+    function stopAuto() {
+      if (autoSlide) clearInterval(autoSlide);
+      autoSlide = null;
+    }
+    startAuto();
+    media.addEventListener?.('change', startAuto);
+
+    window.addEventListener('resize', () => {
+      const oldVisible = visibleSlides;
+      visibleSlides = getVisibleSlides();
+      if (index > totalSlides - visibleSlides) {
+        index = Math.max(0, totalSlides - visibleSlides);
+      }
+      if (oldVisible !== visibleSlides) updateCarousel();
+    }, { passive: true });
+
+    // Pause autoslide while user is interacting (small UX boost)
+    const wrapper = carousel.parentElement;
+    wrapper.addEventListener('mouseenter', stopAuto, { passive: true });
+    wrapper.addEventListener('mouseleave', startAuto, { passive: true });
+  </script>
+</body>
+</html>
